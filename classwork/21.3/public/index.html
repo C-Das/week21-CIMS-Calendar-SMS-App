@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="githubApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My Super App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-table/0.8.3/ng-table.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="GithubController">
+    <input type="text" ng-model="username" />
+    <button ng-click="loadRepos()">Load</button>
+    <table ng-table="githubTable" show-filter="true">
+      <tr ng-repeat="repo in $data">
+        <td data-title="'Repo Name'" sortable="'full_name'" filter="{full_name: 'text'}">{{ repo.full_name }}</td>
+        <td data-title="'Repo Owner'">{{ repo.owner.login }}</td>
+        <td data-title="'Description'" sortable="'description'"  filter="{description: 'text'}">{{ repo.description }}</td>
+      </tr>
+    </table>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/0.8.3/ng-table.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

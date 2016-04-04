@@ -1,0 +1,21 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "google-auth-library": "^0.9.7",
+    "google-calendar": "^1.3.2",
+    "googleapis": "^4.0.0",
+    "mongodb": "^2.1.14",
+    "morgan": "^1.7.0",
+    "oauth": "^0.9.14",
+    "q": "^1.4.1"
+  }
+}
